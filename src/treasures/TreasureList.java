@@ -93,7 +93,7 @@ public class TreasureList {
 
             System.out.println("Выберите сокровище по номеру:");
             int number = sc.nextInt();
-            if (number > 0 && number <= 100) {
+            if (number > 0 && number <= 100 && sum >= treasures[number - 1].getCost()) {
                 selectedTreasures.add(treasures[number - 1]);
                 sum -= treasures[number - 1].getCost();
             } else {
